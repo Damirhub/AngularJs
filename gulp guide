@@ -1,0 +1,14 @@
+1.npm install gulp-cli -g
+2.napraviti folder
+3.uci u folder iz terminala
+4.npm init (kreira json sa informacijama)
+5.npm install gulp --save --dev (kreira obavezan /node_modules u radnom folderu)
+6.napraviti gulpfile.js.
+7.npm install gulp-xxxxxx (potrebni pluginovi)
+
+AKO NE RADI:
+
+sudo npm rebuild node-sass
+
+
+

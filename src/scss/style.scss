@@ -1,0 +1,13 @@
+@import "settings";
+@import "demo";
+
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],
+.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}
+
+.blue {
+    color:blue
+}
+
+.frizbi {
+    color: red;
+}

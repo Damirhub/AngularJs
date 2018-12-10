@@ -1,0 +1,94 @@
+body {
+    background-color: $color-bg;
+}
+
+
+h1 {
+	color: $primary-color;
+}
+
+p {
+	color: $primary-color;
+}
+
+nav{
+
+	ul{
+		background: $bg-color;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li{
+		display: inline-block;
+	}
+
+	a{
+		display:inline-block;
+		color: $text-color;
+		padding: 10px 16px;
+		text-decoration: none;
+	}
+
+	a:hover{
+		background: $hover-color;
+	}
+}
+
+@mixin radius{
+	border-radius: 20px;
+}
+
+@mixin little-rad($radius) {
+	border-radius: ($radius);
+}
+
+.panel{
+	border: 3px solid black;
+	background: orangered;
+	margin: 10px;
+}
+
+.little-panel{
+	@extend .panel;
+	@include little-rad(35px);
+	font-size: 12px;
+	padding: 5px;
+}
+
+.big-panel{
+	@extend .panel;
+	@include little-rad(55px);
+	font-size: 32px;
+	padding: 20px;
+}
+
+.button{
+	background: $buttonBackground;
+	border-radius: 8px;
+	color: $buttonColor;
+	display:inline-block;
+	padding:$buttonPadding;
+	text-decoration: none;
+}
+
+.jumbo-button{
+	@extend .button;
+	padding:$buttonPadding + 30px;
+	
+}
+
+.light-button{
+	@extend .button;
+	background: $buttonBackground * 1.6;
+}
+
+.img-test {
+	margin:5%;
+	background-image: url(../img/test.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 300px;
+}

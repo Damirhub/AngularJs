@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title>AngularJS Hello World</title>
+        <link href="css/style.css" rel='stylesheet' type="text/css" />
+    </head>
+        <body>
+    <!-- <body ng-init="data = {name:'James', isVisible:true, loggedIn: false, status: 'frizbi'}">
+        <div ng-cloak>
+            <div ng-switch on = "data.loggedIn">
+                <div ng-switch-when = "true" g-class="data.status">
+                    Welcome {{data.name}}
+                </div>
+                <div ng-switch-when = "false" ng-class="data.status">Login</div>
+            </div>
+
+            <div ng-show = "data.isVisible">
+                Name: <input type="text" ng-model = "data.name"/>
+
+        {{ data.name  }} -->
+     
+
+    <!-- <body ng-init="name='james'">
+        <div ng-hide = "isHidden">
+            name: <input type="text" ng-model="name" />
+            {{ name }}
+        </div>
+        Hide: <input type="checkbox" ng-model="isHidden"/>
+        <br/>
+        <button ng-click="name='kurks'">Change Name</button>
+    -->
+
+    <!-- <div ng-init="people=[{name:'John', city:'Chandler'}, {name:'Tina', city:'New York'}, {name:'Dave', city:'Seattle'}]">
+
+        <ul>
+            <li ng-repeat = "person in people">
+            {{ person.name }} {{ person.city }}
+        </li>
+        </ul>
+        <br />
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>City</td>
+            </tr>
+            <tr ng-repeat="person in people">
+                <td>{{ person.name }}</td>
+                <td>{{ person.city }}</td>
+            </tr>
+        </table> 
+    </div> -->
+
+    <div ng-app="customersApp" ng-controller="CustomersController" >
+            <h2>Customers</h2>
+            Filter: <input type="text" ng-model="customerFilter.name" />
+            <br /><br />
+            <table>
+                <tr>
+                    <th ng-click="doSort('name')">Name</th>
+                    <th ng-click="doSort('city')">City</th>
+                    <th ng-click="doSort('orderTotal')">Order Total</th>
+                    <th ng-click="doSort('joined')">Joined</th>
+                </tr>
+                <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
+                    <td>{{ cust.name }}</td>
+                    <td>{{ cust.city }}</td>
+                    <td>{{ cust.orderTotal | currency }}</td>
+                    <td>{{ cust.joined | date }}</td>
+                </tr>
+            </table>
+            <br />
+            <span>Total customers: {{ customers.length }}</span>
+        </div>
+        <script src="angular.js"></script>
+        <script>  var app = angular.module('customersApp', []);  </script>
+        <script src="app/controllers.js"></script>
+
+    </body> 
+</html>

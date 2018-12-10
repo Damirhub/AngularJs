@@ -1,0 +1,12 @@
+gulp, 
+sass , bootstrap 3.3.7, fontawesome 4.7.0 demo page
+
+gulp pravi:
+css
+js
+img
+html fajlove
+
+rucno kopirati plugins i fonts 
+
+V: 1.11.2017
